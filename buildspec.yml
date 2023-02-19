@@ -10,6 +10,6 @@ phases:
 
 artifacts:
   files:
-    - './'
+    - './dist'
   discard-paths: no
   base-directory: build
