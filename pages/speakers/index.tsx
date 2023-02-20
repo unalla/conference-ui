@@ -1,8 +1,31 @@
 import Button from "@mui/material/Button";
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
-import { useState } from "react";
-import speaker from "../types/Speaker"
-import Speaker from "./Speaker"
+import { Key, useState } from "react";
+import Speaker from "./Speaker";
+
+type speaker = {
+  id: Key,
+  name: string
+  username: string
+  email: string
+  address: {
+    street: string
+    suite: string
+    city: string
+    zipcode: string
+    geo: {
+      lat: string,
+      lng: string
+    }
+  }
+  phone: string,
+  website: string,
+  company: {
+    name: string
+    catchPhrase: string
+    bs: string
+  }
+}
 
 const Speakers = ({ speakers }:InferGetStaticPropsType<typeof getStaticProps>) => { 
 

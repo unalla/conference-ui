@@ -2,8 +2,6 @@ import Button from "@mui/material/Button";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { useState } from "react";
-import speaker from "../types/Speaker"
-import Speaker from "../speakers/Speaker"
 import { Box } from "@mui/material";
 
 const Sessions = ({ speakers }:InferGetStaticPropsType<typeof getStaticProps>) => { 
@@ -79,7 +77,7 @@ const Sessions = ({ speakers }:InferGetStaticPropsType<typeof getStaticProps>) =
 
 export const getStaticProps: GetStaticProps = async() => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const speakers: speaker[] = await response.json()
+    const speakers: any[] = await response.json()
 
     return {
            props: { 
