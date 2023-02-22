@@ -10,7 +10,6 @@ phases:
 
 artifacts:
   files:
-    - '**/server/*'
+    - '**/*'
   discard-paths: no
-  base-directory: .next
-  
+  base-directory: .next/server/pages
